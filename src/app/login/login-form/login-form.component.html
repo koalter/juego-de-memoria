@@ -1,0 +1,57 @@
+<ion-card>
+  <ion-card-content>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <ion-input
+        label="Correo electrónico"
+        labelPlacement="floating"
+        fill="outline"
+        shape="round"
+        type="email"
+        inputmode="email"
+        placeholder="j.perez@sistemas-utnfra.com.ar"
+        errorText="Ingrese un correo válido"
+        formControlName="email"
+        class="ion-margin-bottom"
+      ></ion-input>
+      <ion-input
+        label="Contraseña"
+        labelPlacement="floating"
+        fill="outline"
+        shape="round"
+        type="password"
+        inputmode="text"
+        errorText="Ingrese una contraseña"
+        formControlName="password"
+        class="ion-margin-bottom"
+      ></ion-input>
+
+      
+      <ion-grid>
+        <ion-row class="ion-justify-content-around">
+          <ion-button
+            color="success"
+            type="submit"
+            [disabled]="form.invalid"
+            class="ion-text-wrap"
+            style="max-width:45%; height:6em"
+            size="large"
+            [ngClass]="{'pulsate-fwd': form.valid}"
+          >
+            Iniciar sesión
+            <ion-icon slot="end" name="log-in-outline"></ion-icon>
+          </ion-button>
+          <ion-button
+            color="secondary"
+            class="ion-text-wrap"
+            style="max-width:45%; height:6em"
+            size="large"
+            (click)="fill()"
+          >
+            Llenar campos
+            <ion-icon slot="end" name="document-text-outline"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card-content>
+</ion-card>

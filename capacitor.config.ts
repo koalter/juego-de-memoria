@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'juego-de-memoria',
+  appId: 'lcea.juego.memoria',
+  appName: 'Juego de Memoria',
   webDir: 'www',
   server: {
     androidScheme: 'https'
