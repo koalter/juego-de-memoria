@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ difficulty }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <img [src]="this.cards[0].visible ? this.cards[0].src : this.placeholder"
+          (click)="action(this.cards[0])">
+      </ion-col>
+      <ion-col size="6">
+        <img [src]="this.cards[1].visible ? this.cards[1].src : this.placeholder"
+          (click)="action(this.cards[1])">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <img [src]="this.cards[2].visible ? this.cards[2].src : this.placeholder"
+          (click)="action(this.cards[2])">
+      </ion-col>
+      <ion-col size="6">
+        <img [src]="this.cards[3].visible ? this.cards[3].src : this.placeholder"
+          (click)="action(this.cards[3])">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <img [src]="this.cards[4].visible ? this.cards[4].src : this.placeholder"
+          (click)="action(this.cards[4])">
+      </ion-col>
+      <ion-col size="6">
+        <img [src]="this.cards[5].visible ? this.cards[5].src : this.placeholder"
+          (click)="action(this.cards[5])">
+      </ion-col>
+    </ion-row>
+    <ng-container *ngIf="difficulty">
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="this.cards[6].visible ? this.cards[6].src : this.placeholder"
+            (click)="action(this.cards[6])">
+        </ion-col>
+        <ion-col size="6">
+          <img [src]="this.cards[7].visible ? this.cards[7].src : this.placeholder"
+            (click)="action(this.cards[7])">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="this.cards[8].visible ? this.cards[8].src : this.placeholder"
+            (click)="action(this.cards[8])">
+        </ion-col>
+        <ion-col size="6">
+          <img [src]="this.cards[9].visible ? this.cards[9].src : this.placeholder"
+            (click)="action(this.cards[9])">
+        </ion-col>
+      </ion-row>
+    </ng-container>
+    <ng-container *ngIf="difficulty > 1">
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="this.cards[10].visible ? this.cards[10].src : this.placeholder"
+            (click)="action(this.cards[10])">
+        </ion-col>
+        <ion-col size="6">
+          <img [src]="this.cards[11].visible ? this.cards[11].src : this.placeholder"
+            (click)="action(this.cards[11])">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="this.cards[12].visible ? this.cards[12].src : this.placeholder"
+            (click)="action(this.cards[12])">
+        </ion-col>
+        <ion-col size="6">
+          <img [src]="this.cards[13].visible ? this.cards[13].src : this.placeholder"
+            (click)="action(this.cards[13])">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="this.cards[14].visible ? this.cards[14].src : this.placeholder"
+            (click)="action(this.cards[14])">
+        </ion-col>
+        <ion-col size="6">
+          <img [src]="this.cards[15].visible ? this.cards[15].src : this.placeholder"
+            (click)="action(this.cards[15])">
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>

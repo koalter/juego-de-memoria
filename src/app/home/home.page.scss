@@ -25,3 +25,15 @@
 #container a {
   text-decoration: none;
 }
+
+ion-grid {
+  ion-button {
+    --padding-top: 7vh;
+    --padding-bottom: 7vh;
+  }
+}
+
+.btn_difficulty {
+  height: 29%;
+  margin: 1rem;
+}

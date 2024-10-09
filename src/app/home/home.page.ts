@@ -9,6 +9,29 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  logoutButtons = [
+    {
+      text: 'Cancelar',
+      role: 'cancel',
+      cssClass: ['ion-color-danger'],
+    },
+    {
+      text: 'Confirmar',
+      role: 'confirm',
+      cssClass: ['ion-color-success'],
+      handler: () => this.logout()
+    }
+  ];
+
+  get width() : number {
+    return window.innerWidth;
+  }
+
+  get height() : number {
+    return window.innerHeight;
+  }
+
   constructor(
     private auth: AuthService,
     private router: Router,
@@ -26,5 +49,9 @@ export class HomePage {
     if (result) {
       this.router.navigate(['login']);
     }
+  }
+
+  start(difficulty: number) {
+    this.router.navigate(['juego', difficulty]);
   }
 }

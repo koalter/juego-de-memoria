@@ -24,6 +24,13 @@ const routes: Routes = [
     path: 'splash-screen',
     loadChildren: () => import('./splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
   },
+  {
+    path: 'juego',
+    loadChildren: () => import('./juego/juego.module').then( m => m.JuegoPageModule),
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: () => redirectUnauthorizedTo(['login']) }
+  },
+
 
 ];
 

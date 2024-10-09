@@ -1,14 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-button id="btn_logout" color="dark">
+        <ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+        Salir
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <div>
-      <strong>Página en construcción</strong>
-    </div>
-    <ion-button (click)="logout()" fill="clear" color="primary">Volver</ion-button>
-  </div>
+  <ion-button (click)="start(0)" class="btn_difficulty" size="large" expand="block" color="success">Fácil</ion-button>
+  <ion-button (click)="start(1)" class="btn_difficulty" size="large" expand="block" color="warning">Medio</ion-button>
+  <ion-button (click)="start(2)" class="btn_difficulty" size="large" expand="block" color="danger">Difícil</ion-button>
 </ion-content>
+
+<ion-alert
+  trigger="btn_logout"
+  header="¿Cerrar sesión?"
+  [buttons]="logoutButtons"
+></ion-alert>
